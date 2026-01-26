@@ -1,8 +1,15 @@
 [
 	{
 		"bindings": {
-			"ctrl-o": "workspace::OpenFiles", // Open files
-			"ctrl-shift-o": "workspace::Open" // Open folder
+			"ctrl-o": "workspace::OpenFiles",  // Open files
+			"ctrl-shift-o": "workspace::Open", // Open folder
+			"ctrl-'": "terminal_panel::Toggle" // Toggle terminal
+		}
+	},
+	{
+		"context": "Workspace",
+		"bindings": {
+			"ctrl-`": null // Disable toggle terminal for this shortcut
 		}
 	},
 	{
