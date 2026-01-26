@@ -65,4 +65,5 @@ Python:
 | ---------- | -------------- | ------------------------ |
 | \<global\> | `CTRL-O`       | Open files               |
 | \<global\> | `CTRL-Shift-O` | Open folder              |
+| \<global\> | `CTRL-'`       | Toggle terminal          |
 | Editor     | `CTRL-M`       | Toggle language selector |
