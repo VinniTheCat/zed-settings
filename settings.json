@@ -8,8 +8,12 @@
 
 	// Window & Layout
 	"title_bar": { "show_sign_in": false },
-	"tab_bar": { "show_nav_history_buttons": false }, // Hides the left & right arrows on the tab bar
+	"tab_bar": { "show_nav_history_buttons": false },
 	"tabs": { "file_icons": true },
+	"project_panel": { "dock": "left" },
+	"outline_panel": { "dock": "left" },
+	// "collaboration_panel": { "dock": "left" },
+	"git_panel": { "dock": "left" },
 
 	// Theme
 	"theme": {
@@ -24,11 +28,17 @@
 	"buffer_font_size": 13,
 	"ensure_final_newline_on_save": false,
 	"format_on_save": "off",
-	"hard_tabs": true, // Use tabs instead of spaces
+	"hard_tabs": true,
 	"tab_size": 4,
 
 	// Programming Languages
 	"languages": {
+		"HTML": {
+			"language_servers": ["superhtml"]
+		},
+		"Luau": {
+			"language_servers": ["luau-lsp"]
+		},
 		"Python": {
 			"ensure_final_newline_on_save": true,
 			"language_servers": ["pylsp", "!basedpyright", "!ruff"]
@@ -37,7 +47,6 @@
 
 	// Language Servers
 	"lsp": {
-		// Python LSP
 		"pylsp": {
 			"settings": {
 				"plugins": {
@@ -55,9 +64,17 @@
 			},
 			"initialization_options": {
 				"workspace": {
-					// Detects ".venv" directory for code completion
 					"venvPath": ".",
 					"venv": ".venv"
+				}
+			}
+		},
+		"luau-lsp": {
+			"settings": {
+				"luau-lsp": {
+					"types": {
+						"definitionFiles": [".poly/luau/def.d.luau"] // Polytoria
+					}
 				}
 			}
 		}
